@@ -1,0 +1,8 @@
+{
+  "name": "brawlstats_server",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
