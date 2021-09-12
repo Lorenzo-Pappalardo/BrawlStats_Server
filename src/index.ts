@@ -1,9 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import axios from 'axios';
 
 const app = express();
-const port = 3000;
+app.use(cors());
 
+const port = 3000;
 const TOKEN = process.env.TOKEN;
 
 app.get('/players/:tag', (req, res) => {
@@ -27,6 +29,6 @@ app.get('/players/:tag', (req, res) => {
   console.log(`Duration: ${after - before} ms\n`);
 });
 
-app.listen(port, () => {});
-
-console.log('Server Started!');
+app.listen(port, () => {
+  console.log('Server started!\nTOKEN: ' + TOKEN + '\n');
+});
